@@ -1,0 +1,681 @@
+{
+	"compiler": {
+		"version": "0.8.7+commit.e28d00a7"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_nombre_sociedad",
+						"type": "string"
+					}
+				],
+				"stateMutability": "payable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "_direccion",
+						"type": "address"
+					}
+				],
+				"name": "Direccion",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "_valor",
+						"type": "uint256"
+					}
+				],
+				"name": "Valor",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "Inversiones_array",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_id",
+						"type": "string"
+					},
+					{
+						"internalType": "address",
+						"name": "_nuevo_socio",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "limite_permitido_inversion",
+						"type": "uint256"
+					}
+				],
+				"name": "addSocio",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "balanceSociedad",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_address",
+						"type": "address"
+					}
+				],
+				"name": "calcularCantidadRecibirRetiroUnilateral",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "_montoEstimado",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "debitado",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "diasBloqueoRetiros",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "diasFinContrato",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "finContratoUnilateral",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "_total_acumulado",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_porcentaje_penalizado",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_total_penalizdo",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_total_retirado",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getAllSocios",
+				"outputs": [
+					{
+						"internalType": "address[]",
+						"name": "",
+						"type": "address[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getCalcularPriceStock",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "_valor_stock",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getCalculoProfit",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "_ganancias",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_socio",
+						"type": "address"
+					}
+				],
+				"name": "getDatosBySocio",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					},
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_capital_invertido",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_acu_ganancias",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_ultimo_retiro",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "blk_creacion",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getMisDatosSocio",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					},
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_capital_invertido",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_acu_ganancias",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_ultimo_retiro",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "blk_creacion",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_socio",
+						"type": "address"
+					}
+				],
+				"name": "getPorcentajeParticipacion",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "inversionSocios",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "inversiones",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "cantidadInvertida",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "bloqueCreacion",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "cantidadRetornada",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "descrip",
+						"type": "string"
+					},
+					{
+						"internalType": "bool",
+						"name": "cerrada",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "permitir_ingreso_capital",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "porcentaje_penalizacion_fin_unilateral",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "priceStock",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "monto",
+						"type": "uint256"
+					}
+				],
+				"name": "retirarGanancias",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "_status",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "saldo_finiquitos",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "sendCapitalPorSocio",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "sendFound",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_timestamp_partida",
+						"type": "uint256"
+					}
+				],
+				"name": "sendProfits",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "_status",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_dias_bloqueos",
+						"type": "uint256"
+					}
+				],
+				"name": "setCantidadDiasBloqueos",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "_status",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bool",
+						"name": "_habilitar",
+						"type": "bool"
+					}
+				],
+				"name": "setHabilitarIngresosCapital",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_socio",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_limite",
+						"type": "uint256"
+					}
+				],
+				"name": "setLimiteInversion",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "_status",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_porcentaje",
+						"type": "uint256"
+					}
+				],
+				"name": "setPorcentajePenalizacionSalidaUnilateral",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "_status",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "sociedad",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "socioPartida",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "socios_array",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_monto",
+						"type": "uint256"
+					}
+				],
+				"name": "withDrawPartidaParaInvertir",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "_status",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "payable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/1_contrato_0001.sol": "SociedadAdministradoraCriptoActivos"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/1_contrato_0001.sol": {
+			"keccak256": "0x7ec090e4cb95266793f5f8321eeec94c01464ebaa3278e85d4f11c8e3d185b83",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://fb419d96328d022ea4bc47d6856dc917296b08a2c2f46189d5e32a0373d386b3",
+				"dweb:/ipfs/QmNqDRiKfpG1sXVyMkgnVbFiJyWb3ndqr2sMPqAot1k1gD"
+			]
+		}
+	},
+	"version": 1
+}
